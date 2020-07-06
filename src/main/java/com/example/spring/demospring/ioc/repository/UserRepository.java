@@ -16,7 +16,7 @@
  */
 package com.example.spring.demospring.ioc.repository;
 
-import com.example.spring.demospring.ioc.domain.User;
+import com.example.spring.demospring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.ApplicationContext;

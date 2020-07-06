@@ -15,7 +15,7 @@
     <!-- Root BeanDefinition 不需要合并，不存在 parent -->
     <!-- 普通 beanDefinition GenericBeanDefinition -->
     <!-- 经过合并后 GenericBeanDefinition 变成 RootBeanDefinition -->
-    <bean id="user" class="com.example.spring.demospring.ioc.domain.User">
+    <bean id="user" class="com.example.spring.demospring.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="Lillian"/>
     </bean>
@@ -23,7 +23,7 @@
     <!-- 普通 beanDefinition GenericBeanDefinition -->
     <!-- 合并后 GenericBeanDefinition 变成 RootBeanDefinition，并且覆盖 parent 相关配置-->
     <!-- primary = true , 增加了一个 address 属性 -->
-    <bean id="superUser" class="com.example.spring.demospring.ioc.domain.SuperUser" parent="user"
+    <bean id="superUser" class="com.example.spring.demospring.domain.SuperUser" parent="user"
           primary="true">
         <property name="address" value="北京"/>
     </bean>

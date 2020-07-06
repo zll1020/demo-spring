@@ -1,7 +1,7 @@
 package com.example.spring.demospring.ioc.dependency;
 
 import com.example.spring.demospring.ioc.annotation.Super;
-import com.example.spring.demospring.ioc.domain.User;
+import com.example.spring.demospring.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
