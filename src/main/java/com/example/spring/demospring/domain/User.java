@@ -1,5 +1,6 @@
 package com.example.spring.demospring.domain;
 
+import com.example.spring.demospring.enums.City;
 import com.example.spring.demospring.ioc.annotation.Super;
 import lombok.Data;
 
@@ -17,6 +18,8 @@ public class User {
 
     private String name;
 
+    private City city;
+
     public static User createUser() {
         User user = new User();
         user.setId(1L);
@@ -29,6 +32,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", city=" + city +
                 '}';
     }
 }

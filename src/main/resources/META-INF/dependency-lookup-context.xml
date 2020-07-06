@@ -18,6 +18,7 @@
     <bean id="user" class="com.example.spring.demospring.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="Lillian"/>
+        <property name="city" value="BEIJING"/>
     </bean>
 
     <!-- 普通 beanDefinition GenericBeanDefinition -->
