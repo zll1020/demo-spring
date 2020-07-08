@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Bean 实例化示例
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
+ * @author Lillian
  * @since
  */
 public class BeanInstantiationDemo {
