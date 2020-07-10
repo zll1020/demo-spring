@@ -1,6 +1,7 @@
 package com.example.spring.demospring.bean.lifecycle;
 
 import com.example.spring.demospring.domain.User;
+import lombok.Data;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.EnvironmentAware;
@@ -15,6 +16,7 @@ import javax.annotation.PreDestroy;
  * @author Lillian
  * @since
  */
+@Data
 public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware, EnvironmentAware,
         InitializingBean, SmartInitializingSingleton, DisposableBean {
 
@@ -43,21 +45,6 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
         this.user = user;
     }
 
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     /**
      * 依赖于注解驱动
@@ -124,16 +111,6 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         this.beanFactory = beanFactory;
-    }
-
-    @Override
-    public void setBeanName(String name) {
-        this.beanName = name;
-    }
-
-    @Override
-    public void setEnvironment(Environment environment) {
-        this.environment = environment;
     }
 
     @Override
