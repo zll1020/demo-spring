@@ -4,6 +4,9 @@ import com.example.spring.demospring.enums.City;
 import com.example.spring.demospring.ioc.annotation.Super;
 import lombok.Data;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 /**
  * Description: 用户类
  * User: zhangll
@@ -20,6 +23,11 @@ public class User {
 
     private City city;
 
+    /**
+     * 当前 Bean 的名称
+     */
+    private transient String beanName;
+
     public static User createUser() {
         User user = new User();
         user.setId(1L);
@@ -35,4 +43,15 @@ public class User {
                 ", city=" + city +
                 '}';
     }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("User Bean [" + beanName + "] 初始化...");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("User Bean [" + beanName + "] 销毁中...");
+    }
+
 }
