@@ -3,9 +3,13 @@ package com.example.spring.demospring.domain;
 import com.example.spring.demospring.enums.City;
 import com.example.spring.demospring.ioc.annotation.Super;
 import lombok.Data;
+import org.springframework.core.io.Resource;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
 
 /**
  * Description: 用户类
@@ -22,6 +26,18 @@ public class User {
     private String name;
 
     private City city;
+
+    private City[] workCities;
+
+    private List<City> lifeCities;
+
+    private Resource configFileLocation;
+
+    private Company company;
+
+    private Properties context;
+
+    private String contextAsText;
 
     /**
      * 当前 Bean 的名称
@@ -41,6 +57,14 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city=" + city +
+                ", workCities=" + Arrays.toString(workCities) +
+                ", lifeCities=" + lifeCities +
+                ", configFileLocation=" + configFileLocation +
+                ", company=" + company +
+                ", context=" + context +
+                ", contextAsText='" + contextAsText + '\'' +
+                ", beanName='" + beanName + '\'' +
+                ", beanName='" + beanName + '\'' +
                 '}';
     }
 
